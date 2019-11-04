@@ -161,7 +161,7 @@ class Order extends Model {
 			INNER JOIN tb_addresses e USING(idaddress)
 			INNER JOIN tb_persons f ON f.idperson = d.idperson
 			ORDER BY a.dtregister DESC
-			LIMIT $start, $itemsPerPage;
+			LimirIT $start, $itemsPerPage;
 		");
 
 		$resultTotal = $sql->select("SELECT FOUND_ROWS() AS nrtotal;");
